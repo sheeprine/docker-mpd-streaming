@@ -7,7 +7,9 @@ if [ ! -d $MUSIC_DIR ]; then
     exit 1
 fi
 
-touch /mpd/cache/{tag_cache,state,sticker.sql} \
+touch /mpd/cache/tag_cache \
+    && touch /mpd/cache/state \
+    && touch /mpd/cache/sticker.sql \
     && chmod -R 0774 /mpd/cache \
     && chown -R mpd: /mpd/cache
 

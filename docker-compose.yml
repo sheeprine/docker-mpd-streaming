@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mpd:
+    image: sheeprine/mpd-steaming
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /mnt/music:/mpd/music:ro
+    ports:
+      - "6600:6600"
+      - "8000:8000"

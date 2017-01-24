@@ -5,6 +5,11 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /mnt/music:/mpd/music:ro
+      - cache:/mpd/cache
+      - playlists:/mpd/playlists
     ports:
       - "6600:6600"
       - "8000:8000"
+volumes:
+  cache:
+  playlists:
